@@ -56,6 +56,9 @@ const MovieDetails = () => {
                 <ListGroupItem className="bg-secondary">
                   <strong>Trama:</strong> {movie.Plot}
                 </ListGroupItem>
+                <ListGroupItem className="bg-secondary">
+                  <strong>Recensioni:</strong>{" "}
+                </ListGroupItem>
               </ListGroup>
             </Col>
           </Row>
