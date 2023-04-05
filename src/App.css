@@ -1,38 +1,69 @@
-.App {
-  text-align: center;
+html {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+img {
+  object-fit: cover;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.cover {
+  height: 450px;
+  object-fit: cover;
+}
+
+.dropdown-item:hover {
+  background-color: rgb(0, 32, 213);
+}
+
+.card:hover {
+  transition: transform 0.3s ease;
+  transform: scale(1.1);
+  cursor: pointer;
+  z-index: 999;
+}
+
+#spinner {
+  width: 150px;
+  height: 150px;
+}
+
+@media screen and (max-width: 767px) {
+  .card {
+    max-width: 90%;
+    margin-inline: auto;
+  }
+
+  #navItem {
+    display: none;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@media screen and (max-width: 575px) {
+  h3 {
+    padding-inline: 5%;
+  }
+  .card {
+    max-width: 290px;
+  }
+
+  #header {
+    padding-inline: 5%;
+  }
 }
 
-.App-link {
-  color: #61dafb;
+#profile-img {
+  object-fit: contain;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#first-row {
+  margin-inline: 25% 25%;
+}
+
+#second-row {
+  margin-inline: 25% 25%;
+}
+
+#bi-pen {
+  top: 165px;
+  left: 25px;
 }
