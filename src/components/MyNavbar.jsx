@@ -2,13 +2,9 @@ import { Navbar, Nav, Container, Dropdown } from "react-bootstrap";
 import { BiSearch, BiBell } from "react-icons/bi";
 import Avatar from "../assets/avatar.png";
 import NetflixLogo from "../assets/netflix_logo.png";
+import { Link } from "react-router-dom";
 
 const MyNavbar = () => {
-  const ProfileClick = event => {
-    event.preventDefault();
-    window.location.href = "/profile";
-  };
-
   return (
     <Navbar bg="dark" variant="dark" expand="md" className="py-1 px-4 align-items-center">
       <Container fluid className="px-0">
@@ -17,9 +13,9 @@ const MyNavbar = () => {
             <img className="netflix" src={NetflixLogo} alt="Netflix-logo" width="130px" />
           </Navbar.Brand>
           <Nav className="d-flex justify-content-center align-items-center mb-0 fw-bold">
-            <Nav.Link className="mx-2 px-1 text-white-50" href="index.html">
+            <Link className="mx-2 px-1 text-white-50 nav-link" to={"/"}>
               Home
-            </Nav.Link>
+            </Link>
             <Nav.Link id="navItem" className="mx-2 px-1 text-light" href="#">
               TV Shows
             </Nav.Link>
@@ -49,7 +45,9 @@ const MyNavbar = () => {
               <img id="navItem" className="ms-3" src={Avatar} alt="avatar" width="40px" />
             </Dropdown.Toggle>
             <Dropdown.Menu align="end" variant="dark">
-              <Dropdown.Item onClick={ProfileClick}>Profile</Dropdown.Item>
+              <Link to="/profile" className="dropdown-item">
+                Profile
+              </Link>
               <Dropdown.Item href="#">Settings</Dropdown.Item>
               <Dropdown.Divider />
             </Dropdown.Menu>

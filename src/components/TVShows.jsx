@@ -2,13 +2,12 @@ import { Alert, Container, Spinner } from "react-bootstrap";
 import MoviesContainer from "./MoviesContainer.jsx";
 import { useEffect, useState } from "react";
 
-const MyMain = () => {
+const TVShows = () => {
   const [TheLordOfTheRings, setTheLordOfTheRings] = useState([]);
   const [StarWars, setStarWars] = useState([]);
   const [HarryPotter, setHarryPotter] = useState([]);
   const [StarWarsIsLoading, setStarWarsIsLoading] = useState(true);
   const [HarryPotterIsLoading, setHarryPotterIsLoading] = useState(true);
-
   const [TheLordOfTheRingsIsLoading, setTheLordOfTheRingsIsLoading] = useState(true);
   const [StarWarsError, setStarWarsError] = useState(false);
   const [HarryPotterError, setHarryPotterError] = useState(false);
@@ -92,4 +91,4 @@ const MyMain = () => {
   );
 };
 
-export default MyMain;
+export default TVShows;
