@@ -1,4 +1,5 @@
 import { Row, Col, Card, Alert } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const MoviesContainer = ({ title, movies }) => {
   return (
@@ -10,9 +11,11 @@ const MoviesContainer = ({ title, movies }) => {
         {movies.length > 0 ? (
           movies.map(movie => (
             <Col key={movie.imdbID} xs={12} sm={6} md={4} xl={3} className="g-3">
-              <Card className="bg-secondary">
-                <Card.Img variant="top" className="cover" src={movie.Poster} alt="Film Cover" />
-              </Card>
+              <Link to={`/movie/${movie.imdbID}`}>
+                <Card className="bg-secondary">
+                  <Card.Img variant="top" className="cover" src={movie.Poster} alt="Film Cover" />
+                </Card>
+              </Link>
             </Col>
           ))
         ) : (

@@ -7,6 +7,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Container } from "react-bootstrap";
 import ProfilePage from "./components/ProfilePage";
 import TVShows from "./components/TVShows";
+import MovieDetails from "./components/MovieDetails";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Routes>
           <Route path="/" element={<TVShows />} />
           <Route path="/profile" element={<ProfilePage />} />
+          <Route path="/movie/:movieId" element={<MovieDetails />} />
         </Routes>
         <MyFooter />
       </BrowserRouter>
